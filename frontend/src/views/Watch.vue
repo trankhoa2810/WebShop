@@ -147,10 +147,6 @@ export default {
       this.currentIndex = -1;
     },
 
-    goToAddSaler() {
-      this.$router.push("/add");
-    },
-
     async searchName() {
       const [error, response] = await this.handle(
         SalerService.findByName(this.nameToSearch)

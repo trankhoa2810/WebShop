@@ -13,15 +13,15 @@
               <p class="blog-post-meta">Thương Hiệu: {{ salers.brandName }}</p>
               <p class="blog-post-meta">Giá: {{ salers.price }} VND.</p>
               <div>
-                <router-link :to="{ path: '/addProduct/' + salers.id }">
-                  <button v-if="currentUser" class="btn btn-danger">
+                <router-link :to="{ path: '/addProduct/' + salers.id }" v-if="currentUser">
+                  <button v-if="currentUser.id === salers.ownerId" class="btn btn-danger">
                     Thêm thông tin chi tiết
                   </button>
                 </router-link>
               </div>
               <div>
-                <router-link :to="{ path: '/editProduct/' + products.id }">
-                  <button v-if="currentUser" class="btn btn-primary mt-2">
+                <router-link :to="{ path: '/editProduct/' + products.id }" v-if="currentUser">
+                  <button v-if="currentUser.id === salers.ownerId" class="btn btn-primary mt-2">
                     Chỉnh sửa thông tin chi tiết
                   </button>
                 </router-link>

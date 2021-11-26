@@ -146,16 +146,6 @@ export default {
       this.currentIndex = -1;
     },
 
-    async removeAllSalers() {
-      const [error, response] = await this.handle(SalerService.deleteAll());
-      if (error) {
-        console.log(error);
-      } else {
-        console.log(response.data);
-        this.refreshList();
-      }
-    },
-
     async searchName() {
       const [error, response] = await this.handle(
         SalerService.findByName(this.nameToSearch)

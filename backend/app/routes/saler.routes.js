@@ -14,7 +14,6 @@ module.exports = app => {
     router.post("/", salers.create);
     router.put("/:id", salers.update);
     router.delete("/:id", salers.delete);
-    router.delete("/", salers.deleteAll);
 
     app.use("/api/salers", router);
 };

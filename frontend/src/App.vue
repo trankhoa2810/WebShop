@@ -58,7 +58,7 @@
             </router-link>
           </li>
           <li class="nav-item">
-            <a class="nav-link" @click.prevent="logout">
+            <a class="nav-link" @click.prevent="logout" href="">
               Đăng xuất
               <i class="fas fa-sign-out-alt"></i>
             </a>

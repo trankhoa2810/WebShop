@@ -17,7 +17,6 @@ class SalerService {
   create(data) { return http.post("/salers/", data); }
   update(id, data) { return http.put(`/salers/${id}`, data); }
   delete(id) { return http.delete(`/salers/${id}`); }
-  deleteAll() { return http.delete("/salers/"); }
   findByName(nameProduct) { return http.get(`/salers/findByName?nameProduct=${nameProduct}`); }
   findByCategory(category) { return http.get(`/salers/findByCategory?category=${category}`); }
 }

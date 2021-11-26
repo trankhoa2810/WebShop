@@ -127,26 +127,6 @@ exports.delete = async (req, res, next) => {
     return res.send({ message: "Salers was deleted successfully" });
 };
 
-
-exports.deleteAll = async (req, res, next) => {
-    const [error, data] = await handle(
-        Saler.deleteMany({ ownerId: req.userId })
-    );
-
-    if (error) {
-        return next(
-            new BadRequestError(
-                500,
-                "An error occurred while removing all salers"
-            )
-        );
-    }
-
-    return res.send({
-        message: `${data.deletedCount} salers were deleted successfully`,
-    });
-};
-
 exports.findByName = async (req, res, next) => {
     const condition = {};
     const nameProduct = req.query.nameProduct;
