@@ -45,7 +45,7 @@ export default {
         console.log(error);
       } else {
         console.log(response.data);
-        this.message = "Sản phẩm được cập nhật thành công.";
+        this.message = "Thông tin được cập nhật thành công.";
       }
     },
     async deleteProduct(id) {
@@ -56,7 +56,7 @@ export default {
         console.log(error);
       } else {
         console.log(response.data);
-        this.$router.push({ name: "Product" });
+        this.message = "Thông tin đã được xoá.";
       }
     },
   },

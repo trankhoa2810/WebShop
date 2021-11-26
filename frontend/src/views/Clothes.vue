@@ -81,7 +81,7 @@
                       Chi tiết sản phẩm
                     </button>
                   </router-link>
-                  <router-link :to="{ path: '/edit/' + saler.id }">
+                  <router-link :to=" { path: '/editSaler/' + saler.id }">
                     <button
                       v-if="currentUser"
                       type="button"
