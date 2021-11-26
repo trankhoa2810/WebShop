@@ -10,7 +10,7 @@
   </div>
   <div v-else>
     <br />
-    <p>Không tìm thấy sản phẩm.</p>
+    <p>Không tìm thấy thông tin sản phẩm.</p>
   </div>
 </template>
 <script>

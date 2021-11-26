@@ -8,7 +8,7 @@
         class="form-control"
         v-model="salerLocal.category"
       />
-      <ErrorMessage name="brandName" class="error-feedback" />
+      <ErrorMessage name="category" class="error-feedback" />
     </div>
     <div class="form-group">
       <label for="brandName">Tên Thương Hiệu</label>
@@ -18,7 +18,7 @@
         class="form-control"
         v-model="salerLocal.brandName"
       />
-      <ErrorMessage name="nameProduct" class="error-feedback" />
+      <ErrorMessage name="brandName" class="error-feedback" />
     </div>
     <div class="form-group">
       <label for="nameProduct">Tên Sản Phẩm</label>
@@ -28,7 +28,7 @@
         class="form-control"
         v-model="salerLocal.nameProduct"
       />
-      <ErrorMessage name="urlImg" class="error-feedback" />
+      <ErrorMessage name="nameProduct" class="error-feedback" />
     </div>
     <div class="form-group">
       <label for="urlImg">Đường Dẫn Ảnh Minh Hoạ</label>
@@ -38,7 +38,7 @@
         class="form-control"
         v-model="salerLocal.urlImg"
       />
-      <ErrorMessage name="price" class="error-feedback" />
+      <ErrorMessage name="urlImg" class="error-feedback" />
     </div>
     <div class="form-group">
       <label for="price">Giá</label>

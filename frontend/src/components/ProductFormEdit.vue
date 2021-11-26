@@ -4,6 +4,16 @@
     :validation-schema="schema"
   >
     <div class="form-group">
+      <label for="productInfoId">InfoProductId</label>
+      <Field
+        name="productInfoId"
+        type="text"
+        class="form-control"
+        v-model="productLocal.productInfoId"
+      />
+      <ErrorMessage name="productInfoId" class="error-feedback" />
+    </div>
+    <div class="form-group">
       <label for="category">Mục sản phẩm</label>
       <Field
         name="category"
@@ -11,7 +21,7 @@
         class="form-control"
         v-model="productLocal.category"
       />
-      <ErrorMessage name="origin" class="error-feedback" />
+      <ErrorMessage name="category" class="error-feedback" />
     </div>
     <div class="form-group">
       <label for="origin">Xuất xứ</label>
@@ -31,7 +41,7 @@
         class="form-control"
         v-model="productLocal.material"
       />
-      <ErrorMessage name="style" class="error-feedback" />
+      <ErrorMessage name="material" class="error-feedback" />
     </div>
     <div class="form-group">
       <label for="style">Phong cách</label>
@@ -41,7 +51,7 @@
         class="form-control"
         v-model="productLocal.style"
       />
-      <ErrorMessage name="wareHouse" class="error-feedback" />
+      <ErrorMessage name="style" class="error-feedback" />
     </div>
     <div class="form-group">
       <label for="wareHouse">Số lượng trong kho</label>
@@ -51,7 +61,7 @@
         class="form-control"
         v-model="productLocal.wareHouse"
       />
-      <ErrorMessage name="address" class="error-feedback" />
+      <ErrorMessage name="wareHouse" class="error-feedback" />
     </div>
     <div class="form-group">
       <label for="address">Địa chỉ</label>

@@ -12,6 +12,20 @@
               <h3 class="blog-post-title mb-4">{{ salers.nameProduct }}</h3>
               <p class="blog-post-meta">Thương Hiệu: {{ salers.brandName }}</p>
               <p class="blog-post-meta">Giá: {{ salers.price }} VND.</p>
+              <div>
+                <router-link :to="{ path: '/addProduct/'}">
+                  <button class="btn btn-danger">
+                    Thêm thông tin chi tiết
+                  </button>
+                </router-link>
+              </div>
+              <div>
+                <router-link :to="{ path: '/editProduct/' + products.id }">
+                  <button class="btn btn-primary mt-2">
+                    Chỉnh sửa thông tin chi tiết
+                  </button>
+                </router-link>
+              </div>
             </div>
           </div>
           <div class="row-1">
@@ -26,11 +40,6 @@
               Số Lượng Trong Kho: {{ products.wareHouse }}
             </p>
             <p class="blog-post-meta">Địa Chỉ: {{ products.address }}</p>
-            <router-link :to=" { path: '/editProduct/' + products.id }">
-              <button class="btn btn-primary">
-                Chỉnh sửa thông tin chi tiết sản phẩm
-              </button>
-            </router-link>
           </div>
         </div>
       </div>

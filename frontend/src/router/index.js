@@ -10,7 +10,7 @@ const routes = [
   },
   {
     path: "/products/findAll/:id",
-    name: "hihi",
+    name: "FindAll",
     component: () => import("../views/ProductInfo"),
   },
   {
@@ -37,6 +37,11 @@ const routes = [
     path: "/add",
     name: "SalerAdd",
     component: () => import("../views/SalerAdd"),
+  },
+  {
+    path: "/addProduct",
+    name: "ProductAdd",
+    component: () => import("../views/ProductAdd"),
   },
   {
     path: "/editSaler/:id",
