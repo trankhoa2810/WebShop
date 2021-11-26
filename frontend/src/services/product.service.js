@@ -13,6 +13,7 @@ class ProductService {
   }
   
   getAll(id) { return http.get(`/products/findAll/${id}`); }
+  get(id) { return http.get(`/products/findId/${id}`); }
   create(data) { return http.post("/products/", data); }
   update(id, data) { return http.put(`/products/${id}`, data); }
   delete(id) { return http.delete(`/products/${id}`); }

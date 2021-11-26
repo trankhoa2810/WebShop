@@ -29,7 +29,7 @@ export default {
   },
   methods: {
     async getProduct(id) {
-      const [error, response] = await this.handle(ProductService.getAll(id));
+      const [error, response] = await this.handle(ProductService.get(id));
       if (error) {
         console.log(error);
       } else {

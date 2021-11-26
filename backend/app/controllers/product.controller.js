@@ -115,3 +115,27 @@ exports.findAll = async (req, res, next) => {
     }
     return res.send(documents);
 };
+
+exports.findId = async (req, res, next) => {
+    const condition = {
+        _id: req.params.id,        
+    };
+
+    const [error, document] = await handle(
+        Product.findOne(condition)
+    );
+
+    if (error) {
+        return next(
+            new BadRequestError(
+                500,
+                `Error retrieving information with id=${req.params.id}`
+            )
+        );
+    }
+    if (!document) {
+        return next(new BadRequestError(404, "Information not found"));
+    }
+
+    return res.send(document);
+};

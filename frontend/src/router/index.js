@@ -70,18 +70,6 @@ const router = createRouter({
   routes,
 });
 
-// router.beforeEach((to, from, next) => {
-//   const publicPages = ["/login", "/register", "/"];
-//   const authRequired = !publicPages.includes(to.path);
-//   const loggedIn = store.getters.userLoggedIn;
-
-//   if (authRequired && !loggedIn) {
-//       next("/login");
-//   } else {
-//       next();
-//   }
-// });
-
 router.beforeEach((to, from, next) => {
   next();
 });
