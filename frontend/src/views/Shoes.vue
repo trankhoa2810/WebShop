@@ -51,7 +51,7 @@
                 <span class="border border-dark">
                   <img
                     class="card-img-top"
-                    style="width: 15em"
+                    style="width: 15em; height: 15em"
                     v-bind:src="saler.urlImg"
                   />
                 </span>
@@ -96,37 +96,6 @@
           </div>
         </div>
       </div>
-
-      <!-- <div class="col-md-6">
-        <ul class="list-group">
-          <li
-            class="list-group-item"
-            :class="{ active: index == activeIndex }"
-            v-for="(saler, index) in salers"
-            :key="saler.id"
-            @click="setActiveSaler(saler, index)"
-          >
-            {{ saler.name }}
-          </li>
-        </ul>
-        <button class="mt-3 btn btn-sm btn-primary" @click="goToAddSaler">
-          Thêm Liên hệ
-        </button>
-        <button
-          class="mt-3 ml-2 btn btn-sm btn-danger"
-          @click="removeAllSalers"
-        >
-          Xóa tất cả
-        </button>
-      </div>
-      <div class="col-md-6">
-        <div v-if="currentSaler">
-          <SalerDetails :saler="currentSaler" />
-          <router-link :to="'/salers/' + currentSaler.id">
-            <span class="badge badge-warning">Hiệu chỉnh</span>
-          </router-link>
-        </div>
-      </div> -->
     </div>
   </div>
 </template>

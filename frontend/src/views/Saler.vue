@@ -51,7 +51,7 @@
                 <span class="border border-dark">
                   <img
                     class="card-img-top"
-                    style="width: 15em"
+                    style="width: 15em; height: 15em"
                     v-bind:src="saler.urlImg"
                   />
                 </span>

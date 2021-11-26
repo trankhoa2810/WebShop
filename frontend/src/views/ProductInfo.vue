@@ -13,15 +13,15 @@
               <p class="blog-post-meta">Thương Hiệu: {{ salers.brandName }}</p>
               <p class="blog-post-meta">Giá: {{ salers.price }} VND.</p>
               <div>
-                <router-link :to="{ path: '/addProduct/' + salers.id}">
-                  <button class="btn btn-danger">
+                <router-link :to="{ path: '/addProduct/' + salers.id }">
+                  <button v-if="currentUser" class="btn btn-danger">
                     Thêm thông tin chi tiết
                   </button>
                 </router-link>
               </div>
               <div>
                 <router-link :to="{ path: '/editProduct/' + products.id }">
-                  <button class="btn btn-primary mt-2">
+                  <button v-if="currentUser" class="btn btn-primary mt-2">
                     Chỉnh sửa thông tin chi tiết
                   </button>
                 </router-link>
@@ -50,8 +50,14 @@
 <script>
 import SalerService from "../services/saler.service";
 import ProductService from "../services/product.service";
+import { mapGetters, mapMutations } from "vuex";
 export default {
   name: "Product",
+  computed: {
+    ...mapGetters({
+      currentUser: "loggedInUser",
+    }),
+  },
 
   data() {
     return {
@@ -62,6 +68,8 @@ export default {
     };
   },
   methods: {
+    ...mapMutations(["initAuthState"]),
+
     async retrieveProducts(ProductIndex) {
       const [error, response] = await this.handle(
         ProductService.getAll(ProductIndex)

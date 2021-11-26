@@ -7,10 +7,6 @@
     </header>
     <div class="row">
       <div class="col-md-8">
-        <p class="text-break">
-          <strong>Token:</strong>
-          {{ currentUser.accessToken }}
-        </p>
         <p>
           <strong>Id:</strong>
           {{ currentUser.id }}
