@@ -49,7 +49,7 @@ exports.delete = async (req, res, next) => {
         return next(
             new BadRequestError(
                 500,
-                `Could not delete review with id=${req.params.id}`
+                `Could not delete information product with id=${req.params.id}`
             )
         );
     }
@@ -58,7 +58,7 @@ exports.delete = async (req, res, next) => {
         return next(new BadRequestError(404, "Review not found"));
     }
 
-    return res.send({ message: "review was deleted successfully" });
+    return res.send({ message: "information product was deleted successfully" });
 };
 
 exports.update = async (req, res, next) => {
@@ -84,7 +84,7 @@ exports.update = async (req, res, next) => {
         return next(
             new BadRequestError(
                 500,
-                `Error updating contact with id=${req.params.id}`
+                `Error updating information product with id=${req.params.id}`
             )
         );
     }
@@ -109,7 +109,7 @@ exports.findAll = async (req, res, next) => {
         return next(
             new BadRequestError(
                 500,
-                `Lỗi trong quá trình truy xuất dữ liệu testId=${req.params.infoId}`
+                `Lỗi trong quá trình truy xuất dữ liệu information productId=${req.params.infoId}`
             )
         );
     }

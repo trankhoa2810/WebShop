@@ -30,7 +30,7 @@ exports.create = async (req, res, next) => {
         return next(
             new BadRequestError(
                 500,
-                "An error occurred while creating the saler"
+                "An error occurred while creating the salers"
             )
         );
     }
@@ -55,7 +55,7 @@ exports.findAll = async (req, res, next) => {
         return next(
             new BadRequestError(
                 500,
-                "An error occurred while retrieving contacts"
+                "An error occurred while retrieving salers"
             )
         );
     }
@@ -86,7 +86,7 @@ exports.update = async (req, res, next) => {
         return next(
             new BadRequestError(
                 500,
-                `Error updating saler with id=${req.params.id}`
+                `Error updating salers with id=${req.params.id}`
             )
         );
     }
@@ -95,7 +95,7 @@ exports.update = async (req, res, next) => {
         return next(new BadRequestError(404, "Saler not found"));
     }
 
-    return res.send({ message: "Saler was updated successfully" });
+    return res.send({ message: "Salers was updated successfully" });
 };
 
 
@@ -115,16 +115,16 @@ exports.delete = async (req, res, next) => {
         return next(
             new BadRequestError(
                 500,
-                `Could not delete saler with id=${req.params.id}`
+                `Could not delete salers with id=${req.params.id}`
             )
         );
     }
 
     if (!document) {
-        return next(new BadRequestError(404, "Saler not found"));
+        return next(new BadRequestError(404, "Salers not found"));
     }
 
-    return res.send({ message: "Saler was deleted successfully" });
+    return res.send({ message: "Salers was deleted successfully" });
 };
 
 
@@ -137,7 +137,7 @@ exports.deleteAll = async (req, res, next) => {
         return next(
             new BadRequestError(
                 500,
-                "An error occurred while removing all saler"
+                "An error occurred while removing all salers"
             )
         );
     }
@@ -162,7 +162,7 @@ exports.findByName = async (req, res, next) => {
         return next(
             new BadRequestError(
                 500,
-                "An error occurred while retrieving contacts"
+                "An error occurred while retrieving salers"
             )
         );
     }
@@ -183,7 +183,7 @@ exports.findId = async (req, res, next) => {
         return next(
             new BadRequestError(
                 500,
-                `Error retrieving information with id=${req.params.id}`
+                `Error retrieving salers with id=${req.params.id}`
             )
         );
     }
@@ -209,7 +209,7 @@ exports.findByCategory = async (req, res, next) => {
         return next(
             new BadRequestError(
                 500,
-                "An error occurred while retrieving contacts"
+                "An error occurred while retrieving salers"
             )
         );
     }

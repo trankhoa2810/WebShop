@@ -1,6 +1,6 @@
 <template>
   <div v-if="product" class="edit-form">
-    <h4>Chỉnh sửa sản phẩm</h4>
+    <h4>Chỉnh sửa thông tin sản phẩm</h4>
     <ProductFormEdit
       :product="product"
       @product-submit="updateProduct"

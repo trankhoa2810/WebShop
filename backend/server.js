@@ -23,7 +23,6 @@ db.mongoose
         process.exit();
     });
 
-// simple route
 app.get("/", (req, res) => {
     res.json({ message: "Welcome to LocalBrand Shop application" });
 });
@@ -32,12 +31,10 @@ setupSalerRoutes(app);
 setupProductRoutes(app);
 setupAuthRoutes(app);
 
-// handle 404 response
 app.use((req, res, next) => {
     next(new BadRequestError(404, "Resource not found"));
 });
 
-// define error-handling middleware last, after other app.use() and routes calls
 app.use((err, req, res, next) => {
     console.log(err);
     res.status(err.statusCode || 500).json({
@@ -45,7 +42,6 @@ app.use((err, req, res, next) => {
     });
 });
 
-// set port, listen for requests
 const PORT = config.app.port;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}.`);

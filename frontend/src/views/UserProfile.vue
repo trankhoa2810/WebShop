@@ -2,7 +2,7 @@
   <div v-if="currentUser">
     <header class="jumbotron">
       <h3>
-        Thông tin người dùng <strong>{{ currentUser.username }}</strong>
+        Xin chào <strong>{{ currentUser.username }} !</strong>
       </h3>
     </header>
     <div class="row">
