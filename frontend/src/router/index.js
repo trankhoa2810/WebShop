@@ -39,7 +39,7 @@ const routes = [
     component: () => import("../views/SalerAdd"),
   },
   {
-    path: "/addProduct",
+    path: "/addProduct/:id",
     name: "ProductAdd",
     component: () => import("../views/ProductAdd"),
   },

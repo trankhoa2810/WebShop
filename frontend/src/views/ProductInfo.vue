@@ -13,7 +13,7 @@
               <p class="blog-post-meta">Thương Hiệu: {{ salers.brandName }}</p>
               <p class="blog-post-meta">Giá: {{ salers.price }} VND.</p>
               <div>
-                <router-link :to="{ path: '/addProduct/'}">
+                <router-link :to="{ path: '/addProduct/' + salers.id}">
                   <button class="btn btn-danger">
                     Thêm thông tin chi tiết
                   </button>

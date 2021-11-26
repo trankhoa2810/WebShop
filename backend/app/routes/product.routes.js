@@ -8,7 +8,7 @@ module.exports = app => {
     router.get("/findAll/:productInfoId", products.findAll);
     router.use(middlewares.verifyToken);
     router.get("/findId/:id", products.findId);
-    router.post("/", products.create);
+    router.post("/:id", products.create);
     router.put("/:id", products.update);
     router.delete("/:id", products.delete);
     

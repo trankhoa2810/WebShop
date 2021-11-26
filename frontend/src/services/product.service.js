@@ -14,7 +14,7 @@ class ProductService {
   
   getAll(id) { return http.get(`/products/findAll/${id}`); }
   get(id) { return http.get(`/products/findId/${id}`); }
-  create(data) { return http.post("/products/", data); }
+  create(id, data) { return http.post(`/products/${id}`, data); }
   update(id, data) { return http.put(`/products/${id}`, data); }
   delete(id) { return http.delete(`/products/${id}`); }
   deleteAll() { return http.delete("/products/"); }

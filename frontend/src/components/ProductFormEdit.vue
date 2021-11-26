@@ -4,16 +4,6 @@
     :validation-schema="schema"
   >
     <div class="form-group">
-      <label for="productInfoId">InfoProductId</label>
-      <Field
-        name="productInfoId"
-        type="text"
-        class="form-control"
-        v-model="productLocal.productInfoId"
-      />
-      <ErrorMessage name="productInfoId" class="error-feedback" />
-    </div>
-    <div class="form-group">
       <label for="category">Mục sản phẩm</label>
       <Field
         name="category"

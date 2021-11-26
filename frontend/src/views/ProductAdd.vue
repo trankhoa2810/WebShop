@@ -4,7 +4,6 @@
     <ProductFormEdit
       :product="product"
       @product-submit="addProduct"
-      @product-delete="resetProduct"
     />
     <p>{{ message }}</p>
   </div>
@@ -21,7 +20,6 @@ export default {
   data() {
     return {
       product: {
-        productInfoId: "",
         category: "",
         brandName: "",
         origin: "",
@@ -37,9 +35,10 @@ export default {
     initProduct() {},
 
     async addProduct(data) {
+      data.productInfoId = this.$route.params.id;
       console.log("input: ", data);
       const [error, response] = await this.handle(
-        ProductService.create(data)
+        ProductService.create(this.$route.params.id, data)
       );
       if (error) {
         console.log(error);
