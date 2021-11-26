@@ -1,7 +1,7 @@
 <template>
   <div class="edit-form">
     <h4>Thêm Sản Phẩm</h4>
-    <SalerForm
+    <SalerFormEdit
       :saler="saler"
       @saler-submit="addSaler"
       @saler-delete="resetSaler"
@@ -12,11 +12,11 @@
 <script>
 
 import SalerService from "../services/saler.service";
-import SalerForm from "../components/SalerForm";
+import SalerFormEdit from "../components/SalerFormEdit";
 export default {
   name: "SalerAdd",
   components: {
-    SalerForm,
+    SalerFormEdit,
   },
   data() {
     return {
