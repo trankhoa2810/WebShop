@@ -101,18 +101,17 @@ export default {
       category: yup
         .string()
         .required("Danh mục sản phẩm là bắt buộc.")
-        .min(2, "Tên phải ít nhất 2 ký tự.")
-        .max(30, "Tên có nhiều nhất 50 ký tự."),
+        .min(2, "Tên danh mục phải ít nhất 2 ký tự.")
+        .max(30, "Tên danh mục có nhiều nhất 50 ký tự."),
       brandName: yup
         .string()
-        .required("Tên phải có giá trị.")
-        .min(2, "Tên phải ít nhất 2 ký tự.")
-        .max(30, "Tên có nhiều nhất 50 ký tự."),
+        .required("Tên thương hiệu là bắt buộc.")
+        .min(2, "Tên thương hiệu phải ít nhất 2 ký tự.")
+        .max(30, "Tên thương hiệu có nhiều nhất 50 ký tự."),
       nameProduct: yup
         .string()
-        .required("Tên phải có giá trị.")
-        .min(2, "Tên phải ít nhất 2 ký tự.")
-        .max(50, "Tên có nhiều nhất 50 ký tự."),
+        .required("Tên sản phẩm là bắt buộc.")
+        .min(2, "Tên sản phẩm phải ít nhất 2 ký tự."),
       urlImg: yup
         .string()
         .required("Phải nhập đường dẫn hình ảnh minh hoạ sản phẩm."),

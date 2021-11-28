@@ -56,7 +56,7 @@ export default {
         console.log(error);
       } else {
         console.log(response.data);
-        this.$router.push({ name: "Saler" });
+        this.message = "Sản phẩm đã được xoá!";
       }
     },
   },
