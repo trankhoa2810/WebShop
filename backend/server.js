@@ -24,7 +24,7 @@ db.mongoose
     });
 
 app.get("/", (req, res) => {
-    res.json({ message: "Welcome to LocalBrand Shop application" });
+    res.json({ message: "Welcome to Local Brand Shop application" });
 });
 
 setupSalerRoutes(app);

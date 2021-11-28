@@ -21,7 +21,6 @@ export default {
     return {
       product: {
         category: "",
-        brandName: "",
         origin: "",
         material: "",
         style: "",

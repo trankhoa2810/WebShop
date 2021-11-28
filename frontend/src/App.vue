@@ -5,7 +5,7 @@
       class="navbar navbar-expand-lg navbar-dark"
     >
       <a class="navbar-brand" href="/">
-        PK Shop<i class="fas fa-shopping-cart"></i>
+        Local Brand<i class="fas fa-shopping-cart"></i>
       </a>
       <button
         class="navbar-toggler"
