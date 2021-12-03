@@ -42,6 +42,7 @@ export default {
         SalerService.update(this.saler.id, data)
       );
       if (error) {
+        alert("Bạn không được phép cập nhật sản phẩm này!");
         console.log(error);
       } else {
         console.log(response.data);
@@ -53,6 +54,7 @@ export default {
         SalerService.delete(id)
       );
       if (error) {
+        alert("Bạn không được phép xoá sản phẩm này!");
         console.log(error);
       } else {
         console.log(response.data);
