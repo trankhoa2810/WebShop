@@ -4,7 +4,7 @@
       style="background-color: #fc2327"
       class="navbar navbar-expand-lg navbar-dark"
     >
-      <a class="navbar-brand" href="/">
+      <a href="/" class="navbar-brand">
         Local Brand<i class="fas fa-shopping-cart"></i>
       </a>
       <button
@@ -22,20 +22,24 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="/"
-              >Home <i class="fas fa-home"></i> <span class="sr-only">(current)</span>
-            ></a>
+              <a class="nav-link" href="/"
+                >Home <i class="fas fa-home"></i>
+                <span class="sr-only">(current)</span> ></a
+              >
+            
           </li>
         </ul>
         <div v-if="!currentUser" class="navbar-nav ml-auto">
           <li class="nav-item">
-            <router-link to="/register" class="nav-link"> Đăng ký
-            <i class="fas fa-user-plus"></i>
+            <router-link to="/register" class="nav-link">
+              Đăng ký
+              <i class="fas fa-user-plus"></i>
             </router-link>
           </li>
           <li class="nav-item">
-            <router-link to="/login" class="nav-link"> Đăng nhập 
-            <i class="fas fa-sign-in-alt"></i>
+            <router-link to="/login" class="nav-link">
+              Đăng nhập
+              <i class="fas fa-sign-in-alt"></i>
             </router-link>
           </li>
         </div>
@@ -83,9 +87,7 @@ export default {
     }),
   },
   methods: {
-    ...mapMutations([
-      "initAuthState",
-    ]),
+    ...mapMutations(["initAuthState"]),
 
     logout() {
       this.$store.commit("logout");

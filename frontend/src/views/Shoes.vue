@@ -8,17 +8,18 @@
         >
           Danh Mục
         </a>
-        <a href="/quan-ao" class="list-group-item list-group-item-action"
-          >Quần Áo</a
-        >
-        <a href="/giay-dep" class="list-group-item list-group-item-action"
-          >Giày Dép</a
-        >
-        <a
-          href="/dong-ho-thoi-trang"
-          class="list-group-item list-group-item-action"
-          >Đồng Hồ Thời Trang</a
-        >
+        <router-link :to="{ path: '/quan-ao' }">
+          <a class="list-group-item list-group-item-action">Quần Áo </a>
+        </router-link>
+        <router-link :to="{ path: '/giay-dep' }">
+          <a class="list-group-item list-group-item-action">Giày Dép</a>
+        </router-link>
+
+        <router-link :to="{ path: '/dong-ho-thoi-trang' }">
+          <a class="list-group-item list-group-item-action"
+            >Đồng Hồ Thời Trang</a
+          >
+        </router-link>
       </div>
 
       <div class="col-9">
@@ -81,7 +82,7 @@
                       Chi tiết sản phẩm
                     </button>
                   </router-link>
-                  <router-link :to=" { path: '/editSaler/' + saler.id }">
+                  <router-link :to="{ path: '/editSaler/' + saler.id }">
                     <button
                       v-if="currentUser"
                       type="button"
@@ -172,6 +173,16 @@ export default {
   text-align: left;
   max-width: 750px;
   margin: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
 }
 </style>
 
